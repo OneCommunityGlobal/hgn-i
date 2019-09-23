@@ -1,0 +1,13 @@
+db.messages.createIndex({"senderId":1});
+db.messages.createIndex({"recipientId":1});
+db.projects.createIndex({"name":1},{"unique":true});
+db.projects.createIndex({"users.id":1});
+db.tasks.createIndex({"name":1},{"unique":true});
+db.teams.createIndex({"name":1},{"unique":true});
+db.teams.createIndex({"users.id":1});
+db.timesheets.createIndex({"userId":1});
+db.timesheets.createIndex({"projectId":1});
+db.users.createIndex({"userName":1},{"unique":true});
+db.users.createIndex({"email":1},{"unique":true});
+db.users.createIndex({"project.id":1});
+db.users.createIndex({"team.id":1});

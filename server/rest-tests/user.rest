@@ -1,0 +1,159 @@
+### File for making HTTP calls using Visual Studio Code's REST Client extension
+### You can use this file to test out backend url's without needing to run a front end
+### Just start the backend server and click on any "Send Request" below to test.
+### Requires installation of the REST Client extension by Huachao Mao for VS Code.
+### You can specify a requestor ID with or without admin rights to test security
+
+###
+POST http://localhost:4500/user/getUserByLogin HTTP/1.1
+content-type: application/json
+
+{
+  "email": "none@none.com",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:4500/user/createUser HTTP/1.1
+content-type: application/json
+
+{
+  "requestorId": "5ce9108b0216c5100ca5cfc4",
+  "document": {
+    "userName": "test",
+    "email": "test@none.com",
+    "firstName": "test",
+    "lastName": "test",
+    "password": "password",
+    "isActive": true,
+    "isAdmin": true,
+    "phoneNumbers": [
+      {"home": "555-1212"},
+      {"work": "666-1313"}
+    ],
+    "weeklyComittedHours": 100,
+    "utcOffset": -8,
+    "profilePic": "/images/mypic.jpg",
+    "teams": [
+      {
+        "id": "5ce91ba80216c5100ca5cfcd",
+        "name": "Test Team1"
+      },
+      {
+        "id": "5d148ffc6ccd340874afe68f",
+        "name": "Test Team2"
+      }
+    ],
+    "projects": [
+      {
+        "id": "5d3ac750a4ad5c0d18196744",
+        "name": "Test Project1"
+      },
+      {
+        "id": "5d3ac92e32973f128cd15ac7",
+        "name": "Test Project2"
+      }
+    ],
+    "role": "Volunteer",
+    "bio": "Bio goes here",
+    "personalLinks": [
+      {
+        "linkName": "User Link 1",
+        "linkURL": "http://localhost"
+      }
+    ],
+    "adminLinks": [
+      {
+        "linkName": "Admin Link 1",
+        "linkURL": "http://trucks.com"
+      },
+      {
+        "linkName": "Admin Link 2",
+        "linkURL": "http://onecommunity.com"
+      }
+    ]
+  },
+  "nonadminId": "5cf0ce5cdff6541c9c127f99",
+  "adminId": "5ce9108b0216c5100ca5cfc4"
+}
+
+###
+
+POST http://localhost:4500/user/getUserById/5cf0ce5cdff6541c9c127f99 HTTP/1.1
+content-type: application/json
+
+{
+  "requestorId": "5ce9108b0216c5100ca5cfc4",
+  "project": {"firstName":1, "projects":1},
+  "nonadminId": "5cf0ce5cdff6541c9c127f99",
+  "adminId": "5ce9108b0216c5100ca5cfc4"
+}
+
+###
+POST http://localhost:4500/user/getUsersByProjectId/5d3ac750a4ad5c0d18196744 HTTP/1.1
+content-type: application/json
+
+{
+  "requestorId": "5ce9108b0216c5100ca5cfc4",
+  "nonadminId": "5cf0ce5cdff6541c9c127f99",
+  "adminId": "5ce9108b0216c5100ca5cfc4"
+}
+
+###
+
+POST http://localhost:4500/user/getUserByUserName/test HTTP/1.1
+content-type: application/json
+
+{
+  "requestorId": "5ce9108b0216c5100ca5cfc4",
+  "project": {"firstName":1},
+  "nonadminId": "5cf0ce5cdff6541c9c127f99",
+  "adminId": "5ce9108b0216c5100ca5cfc4"
+}
+
+###
+
+POST http://localhost:4500/user/updateUserById/5cf0ce5cdff6541c9c127f99 HTTP/1.1
+content-type: application/json
+
+{
+  "requestorId": "5ce9108b0216c5100ca5cfc4",
+  "nonadminId": "5cf0ce5cdff6541c9c127f99",
+  "adminId": "5ce9108b0216c5100ca5cfc4",
+  "document": {
+    "teams": [
+      {
+        "id": "5ce91ba80216c5100ca5cfcd",
+        "name": "Team1"
+      },
+      {
+        "id": "5d148ffc6ccd340874afe68f",
+        "name": "Team2"
+      }
+    ],
+    "projects": [
+      {
+        "id": "5d3ac750a4ad5c0d18196744",
+        "name": "Project1"
+      },
+      {
+        "id": "5d3ac92e32973f128cd15ac7",
+        "name": "Project2"
+      }
+    ]
+  }
+}
+
+###
+
+POST http://localhost:4500/user/deleteUserById/5d5cc6cddf053217a0523f0e HTTP/1.1
+content-type: application/json
+
+{
+  "requestorId": "5ce9108b0216c5100ca5cfc4",
+  "nonadminId": "5cf0ce5cdff6541c9c127f99",
+  "adminId": "5ce9108b0216c5100ca5cfc4"
+}
+
+###

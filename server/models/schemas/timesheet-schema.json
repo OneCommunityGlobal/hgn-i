@@ -1,0 +1,54 @@
+{
+    "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+            "userId", "projectId", "totalMinutes"
+        ],
+        "properties": {
+            "userId": {
+                "bsonType": "objectId"
+            },
+            "projectId": {
+                "bsonType": "objectId"
+            },
+            "dateOfWork": {
+                "bsonType": "date"
+            },
+            "begDateTime": {
+                "bsonType": "date",
+                "description": "DateTime value expressed as: yyyy-mm-ddThh:mm",
+                "note": "Not currently used? Option later to specify time on timesheets as beg/end values?"
+            },
+            "endDateTime": {
+                "bsonType": "date",
+                "description": "DateTime value expressed as: yyyy-mm-ddThh:mm",
+                "note": "Not currently used? Option later to specify time on timesheets as beg/end values?"
+            },
+            "utcOffset": {
+                "bsonType": "int",
+                "description": "Users Time Zone Expressed as a UTC Offset",
+                "minValue": -12,
+                "maxValue": 14,
+                "errMessage": "Must be a Valid UTC Offset",
+                "note": "This is for future use to adjust date values by timezone.",
+                "note2": "Store all date/time values in database with US-LA as base value?"
+            },
+            "totalMinutes": {
+                "bsonType": "int"
+            },
+            "notes": {
+                "bsonType": "string"
+            },
+            "isTangible": {
+                "bsonType": "boolean",
+                "default": true
+            },
+            "createdDate": {
+                "bsonType": "date"
+            },
+            "lastModifiedDate": {
+                "bsonType": "date"
+            }
+        }
+    }
+}

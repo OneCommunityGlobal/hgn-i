@@ -1,0 +1,30 @@
+{
+    "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+            "name"
+        ],
+        "properties": {
+            "name": {
+                "bsonType": "string",
+                "index":"unique",
+                "description": "The Team Name",
+                "errMessage": "Name Must be a String And is Required",
+                "regex": ""
+            },
+            "managerId": {
+                "bsonType": "objectId"
+            },
+            "isActive": {
+                "bsonType": "boolean",
+                "default": true
+            },
+            "createdDate": {
+                "bsonType": "date"
+            },
+            "lastModifiedDate": {
+                "bsonType": "date"
+            }
+        }
+    }
+}

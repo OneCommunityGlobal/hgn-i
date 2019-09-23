@@ -1,0 +1,34 @@
+{
+    "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+            "name"
+        ],
+        "properties": {
+            "name": {
+                "bsonType": "string",
+                "index":"unique"
+            },
+            "description": {
+                "bsonType": "string"
+            },
+            "assignedToId": {
+                "bsonType": "objectId"
+            },
+            "isActive": {
+                "bsonType": "boolean",
+                "default": true
+            },
+            "isComplete": {
+                "bsonType": "boolean",
+                "default": true
+            },
+            "createdDate": {
+                "bsonType": "date"
+            },
+            "lastModifiedDate": {
+                "bsonType": "date"
+            }
+        }
+    }
+}

@@ -1,0 +1,148 @@
+[
+{
+  "_id": {
+    "$oid": "5ce9108b0216c5100ca5cfc4"
+  },
+  "userName": "useradmin",
+  "email": "none@none.com",
+  "firstName": "Joe",
+  "lastName": "Admin",
+  "password": "$2y$12$ImeKBSzlcL0EAeZSnqik/OdnLNmyBdZYBR7u3fWu5XIm51JuoI3JW",
+  "isActive": true,
+  "isAdmin": true,
+  "phoneNumbers": [
+    {
+      "home": "555-1212"
+    },
+    {
+      "cell": "666-1313"
+    }
+  ],
+  "weeklyComittedHours": 100,
+  "utcOffset": -8,
+  "profilePic": "/images/mypic.jpg",
+  "createdDate": "2019-05-30T10:53:27.625Z",
+  "lastModifiedDate": "2019-05-30T10:51:18.758Z",
+  "teams": [
+    {
+      "id": {
+        "$oid": "5ce91ba80216c5100ca5cfcd"
+      },
+      "name": "Team1"
+    },
+    {
+      "id": {
+        "$oid": "5d148ffc6ccd340874afe68f"
+      },
+      "name": "Team2"
+    }
+  ],
+  "projects": [
+    {
+      "id": {
+        "$oid": "5d3ac750a4ad5c0d18196744"
+      },
+      "name": "Project1"
+    },
+    {
+      "id": {
+        "$oid": "5d3ac92e32973f128cd15ac7"
+      },
+      "name": "Project2"
+    }
+  ],
+  "role": "Administrator",
+  "bio": "Bio goes here",
+  "personalLinks": [
+    {
+      "linkName": "User Link 1",
+      "linkURL": "http://localhost"
+    }
+  ],
+  "adminLinks": [
+    {
+      "linkName": "Admin Link 1",
+      "linkURL": "http://trucks.com"
+    },
+    {
+      "linkName": "Admin Link 2",
+      "linkURL": "http://onecommunity.com"
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5cf0ce5cdff6541c9c127f99"
+  },
+  "isActive": true,
+  "isAdmin": false,
+  "phoneNumbers": [
+    {
+      "home": "555-1212"
+    },
+    {
+      "cell": "666-1313"
+    }
+  ],
+  "weeklyComittedHours": 100,
+  "utcOffset": -5,
+  "createdDate": {
+    "$date": "2019-05-31T06:49:00.795Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2019-08-25T04:35:19.564Z"
+  },
+  "teams": [
+    {
+      "id": {
+        "$oid": "5ce91ba80216c5100ca5cfcd"
+      },
+      "name": "Team1"
+    },
+    {
+      "id": {
+        "$oid": "5d148ffc6ccd340874afe68f"
+      },
+      "name": "Team2"
+    }
+  ],
+  "projects": [
+    {
+      "id": {
+        "$oid": "5d3ac750a4ad5c0d18196744"
+      },
+      "name": "Project1"
+    },
+    {
+      "id": {
+        "$oid": "5d3ac92e32973f128cd15ac7"
+      },
+      "name": "Project2"
+    }
+  ],
+  "personalLinks": [
+    {
+      "linkName": "Link1",
+      "linkURL": "mylink1.com"
+    }
+  ],
+  "adminLinks": [
+    {
+      "linkName": "Link2",
+      "linkURL": "mylink2.com"
+    }
+  ],
+  "badgeCollection": [],
+  "infringments": [],
+  "password": "$2y$12$ImeKBSzlcL0EAeZSnqik/OdnLNmyBdZYBR7u3fWu5XIm51JuoI3JW",
+  "role": "Volunteer",
+  "firstName": "Fred",
+  "lastName": "Volunteer",
+  "email": "fredvol@none.com",
+  "profilePic": "/images/mypic.jpg",
+  "userName": "fredvol",
+  "bio": "Fred's Bio goes here",
+  "__v": 0
+}
+]

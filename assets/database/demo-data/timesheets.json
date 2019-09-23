@@ -1,0 +1,170 @@
+[
+{
+  "_id": {
+    "$oid": "5d493bd3a36b821e3c0adc02"
+  },
+  "userId": {
+    "$oid": "5ce9108b0216c5100ca5cfc4"
+  },
+  "projectId": {
+    "$oid": "5d3ac750a4ad5c0d18196744"
+  },
+  "dateOfWork": {
+    "$date": "2019-10-01T00:00:00.000Z"
+  },
+  "utcOffset": -8,
+  "totalMinutes": 300,
+  "notes": "Some Notes",
+  "isTangible": true,
+  "createdDate": {
+    "$date": "2019-08-06T08:35:22.995Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2019-08-06T08:35:22.995Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5d493c6fa36b821e3c0adc03"
+  },
+  "userId": {
+    "$oid": "5ce9108b0216c5100ca5cfc4"
+  },
+  "projectId": {
+    "$oid": "5d3ac750a4ad5c0d18196744"
+  },
+  "dateOfWork": {
+    "$date": "2019-10-01T00:00:00.000Z"
+  },
+  "utcOffset": -8,
+  "totalMinutes": 200,
+  "notes": "Some Notes",
+  "isTangible": false,
+  "createdDate": {
+    "$date": "2019-08-06T08:38:06.999Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2019-08-06T08:38:06.999Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5d493da0cdcab3226cf04ef5"
+  },
+  "userId": {
+    "$oid": "5cf0ce5cdff6541c9c127f99"
+  },
+  "projectId": {
+    "$oid": "5d3ac750a4ad5c0d18196744"
+  },
+  "dateOfWork": {
+    "$date": "2019-10-01T00:00:00.000Z"
+  },
+  "utcOffset": -8,
+  "totalMinutes": 100,
+  "notes": "Some Notes",
+  "isTangible": false,
+  "createdDate": {
+    "$date": "2019-08-06T08:43:12.068Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2019-08-06T08:43:12.068Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5d493dadcdcab3226cf04ef6"
+  },
+  "userId": {
+    "$oid": "5cf0ce5cdff6541c9c127f99"
+  },
+  "projectId": {
+    "$oid": "5d3ac750a4ad5c0d18196744"
+  },
+  "dateOfWork": {
+    "$date": "2019-10-01T00:00:00.000Z"
+  },
+  "utcOffset": -8,
+  "totalMinutes": 400,
+  "notes": "Some Notes",
+  "isTangible": true,
+  "createdDate": {
+    "$date": "2019-08-06T08:43:25.756Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2019-08-06T08:43:25.756Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5d4bb34ddab4ec139cb940c0"
+  },
+  "userId": {
+    "$oid": "5cf0ce5cdff6541c9c127f99"
+  },
+  "projectId": {
+    "$oid": "5d3ac750a4ad5c0d18196744"
+  },
+  "dateOfWork": {
+    "$date": "2019-10-01T00:00:00.000Z"
+  },
+  "utcOffset": -8,
+  "totalMinutes": 400,
+  "notes": "Some Notes",
+  "isTangible": true,
+  "createdDate": {
+    "$date": "2019-08-08T05:29:49.289Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2019-08-08T05:29:49.289Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5d4bb380dab4ec139cb940c1"
+  },
+  "projectId": {
+    "$oid": "5d3ac750a4ad5c0d18196744"
+  },
+  "dateOfWork": {
+    "$date": "2019-10-01T00:00:00.000Z"
+  },
+  "utcOffset": -8,
+  "totalMinutes": 400,
+  "notes": "Some Notes",
+  "isTangible": true,
+  "userId": {
+    "$oid": "5cf0ce5cdff6541c9c127f99"
+  },
+  "createdDate": {
+    "$date": "2019-08-08T05:30:40.528Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2019-08-08T05:30:40.528Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5d50e4d91dd49d0d587ce1dd"
+  },
+  "projectId": {
+    "$oid": "5d3ac750a4ad5c0d18196744"
+  },
+  "dateOfWork": {
+    "$date": "2019-11-01T00:00:00.000Z"
+  },
+  "utcOffset": -8,
+  "totalMinutes": 500,
+  "notes": "Some Notes",
+  "isTangible": true,
+  "userId": {
+    "$oid": "5cf0ce5cdff6541c9c127f99"
+  },
+  "createdDate": {
+    "$date": "2019-08-12T04:02:33.921Z"
+  },
+  "lastModifiedDate": {
+    "$date": "2019-08-12T04:02:33.921Z"
+  }
+}
+]

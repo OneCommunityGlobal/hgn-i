@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+}
+
+.header-navbar {
+  margin-bottom: 50px;
+}
+
+.close{
+  visibility: hidden
+}
+
+
+.newProfilePic
+{
+  visibility:hidden;
+  width: 0;
+  height:0;
+  padding-top: 7px;	
+  padding-right: 2px;
+  position: absolute;
+  right: 0;
+  top: 0;
+ 
+}
+.infringement{
+  color: blue
+}
+.profilepic
+{
+  height: 180px;
+  width: 180px;
+}
+
+.accordion-toggle:after {
+
+  font-family: 'FontAwesome';
+  content: "\f054";
+  float: right;
+}
+
+.accordion-toggle.collapsed:after {
+/* symbol for down chevron*/
+content: "\f078";
+}
+
+.dashboardbutton
+{
+background-color: black;
+  border: black;
+}
+
+.hgn-leaderboard
+{
+/*background-color:#FFCCBC */
+background-color: black
+}
+
+.hgn-navbar {
+	color: rgb(212, 209, 203);
+}

@@ -1,0 +1,137 @@
+{
+    "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+            "email",
+            "userName",
+            "firstName",
+            "lastName",
+            "password"
+        ],
+        "properties": {
+            "userName": {
+                "bsonType": "string",
+                "index":"unique",
+                "description": "User Name",
+                "errMessage": "Must be a String And is Required",
+                "regex": "",
+                "canUpdate": false
+            },
+            "password": {
+                "bsonType": "string",
+                "subType": "password",
+                "regex": ""
+            },
+            "isActive": {
+                "bsonType": "boolean",
+                "default": true
+            },
+            "isAdmin": {
+                "bsonType": "boolean",
+                "useDefaultIfInvalid": true,
+                "defaultValue": false,
+                "canUpdate": false
+            },
+            "role": {
+                "bsonType": "string",
+                "defaultValue": "Volunteer",
+                "useDefaultIfInvalid": true,
+                "enum": [
+                    "Volunteer",
+                    "Manager",
+                    "Other",
+                    "Core Team"
+                ]
+            },
+            "firstName": {
+                "bsonType": "string",
+                "minlength": 2
+            },
+            "lastName": {
+                "bsonType": "string",
+                "minlength": 2
+            },
+            "phoneNumbers": {
+                "bsonType": "array"
+            },
+            "phoneNumbers.type": {
+                "bsonType": "string"
+            },
+            "phoneNumbers.number": {
+                "bsonType": "string",
+                "regex" : "Phone number regex here"
+            },
+            "utcOffset": {
+                "bsonType": "int",
+                "description": "Users Time Zone Expressed as a UTC Offset",
+                "minValue": -12,
+                "maxValue": 14,
+                "errMessage": "Must be a Valid UTC Offset",
+                "Note": "This is for future use to adjust date values."
+            },
+            "bio": {
+                "bsonType": "string"
+            },
+            "email": {
+                "bsonType": "string",
+                "index":"unique"
+            },
+            "weeklyComittedHours": {
+                "bsonType": "number",
+                "minValue": 0,
+                "maxValue": 40
+            },
+            "createdDate": {
+                "bsonType": "date"
+            },
+            "lastModifiedDate": {
+                "bsonType": "date"
+            },
+            "personalLinks": {
+                "bsonType": "array"
+            },
+            "personalLinks.linkName": {
+                "bsonType": "string"
+            },
+            "personalLinks.linkURL": {
+                "bsonType": "url"
+            },
+            "adminLinks": {
+                "bsonType": "array"
+            },
+            "adminLinks.linkName": {
+                "bsonType": "string"
+            },
+            "adminLinks.linkURL": {
+                "bsonType": "url"
+            },
+            "projects": {
+                "bsonType": "array"
+            },
+            "project._id": {
+                "bsonType": "objectId"
+            },
+            "project._name": {
+                "bsonType": "objectId"
+            },
+            "teams": {
+                "bsonType": "array"
+            },
+            "team._id": {
+                "bsonType": "objectId"
+            },
+            "team._name": {
+                "bsonType": "objectId"
+            },
+            "badgeCollection": {
+                "bsonType": "array"
+            },
+            "profilePic": {
+                "bsonType": "string"
+            },
+            "infringments": {
+                "bsonType": "array"
+            }
+        }
+    }
+}

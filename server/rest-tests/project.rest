@@ -1,0 +1,66 @@
+### File for making HTTP calls using Visual Studio Code's REST Client extension
+### You can use this file to test out backend url's without needing to run a front end
+### Just start the backend server and click on any "Send Request" below to test.
+### Requires installation of the REST Client extension by Huachao Mao for VS Code.
+### You can specify a requestor ID with or without admin rights to test security
+
+POST http://localhost:4500/project/createProject HTTP/1.1
+content-type: application/json
+
+{
+  "requestorId": "5ce9108b0216c5100ca5cfc4",
+  "document": {
+    "name": "testproject",
+    "isActive": true
+  },
+  "nonadminId": "5cf0ce5cdff6541c9c127f99",
+  "adminId": "5ce9108b0216c5100ca5cfc4"
+}
+
+###
+
+POST http://localhost:4500/project/getProjectById/5d3ac750a4ad5c0d18196744 HTTP/1.1
+content-type: application/json
+
+{
+  "requestorId": "5cf0ce5cdff6541c9c127f99",
+  "nonadminId": "5cf0ce5cdff6541c9c127f99",
+  "adminId": "5ce9108b0216c5100ca5cfc4"
+}
+
+###
+POST http://localhost:4500/project/getProjects HTTP/1.1
+content-type: application/json
+
+{
+  "requestorId": "5cf0ce5cdff6541c9c127f99",
+  "nonadminId": "5cf0ce5cdff6541c9c127f99",
+  "adminId": "5ce9108b0216c5100ca5cfc4"
+}
+
+###
+
+POST http://localhost:4500/project/updateProjectById/5d4bb041dab4ec139cb940ba HTTP/1.1
+content-type: application/json
+
+{
+  "requestorId": "5cf0ce5cdff6541c9c127f99",
+  "nonadminId": "5cf0ce5cdff6541c9c127f99",
+  "adminId": "5ce9108b0216c5100ca5cfc4",
+  "document": {
+    "isActive": false
+  }
+}
+
+###
+
+POST http://localhost:4500/project/deleteProjectById/5d5cbb2372d8881750c57900 HTTP/1.1
+content-type: application/json
+
+{
+  "requestorId": "5ce9108b0216c5100ca5cfc4",
+  "nonadminId": "5cf0ce5cdff6541c9c127f99",
+  "adminId": "5ce9108b0216c5100ca5cfc4"
+}
+
+###

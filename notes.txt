@@ -1,0 +1,20 @@
+- I used "TODO" in both the front and back ends to indicate incomplete code. Most IDE's allow you to search for TODO, so you can do that to see what still needs to be done. May not be up to date though.
+
+- The "project" related files are the most complete and were used to create most of the other files. So if you need to create a new database collection and the routines to access it you can copy the "components/project.jsx", "components/project-form.jsx" and "services/project-service.js" to new files and rename "Project" and "project" (making sure to use caps or not) in all the files. You can then modify as necessary for the new collection.
+
+- The common/renderers/render-input.jsx is the most complete renderer. The other renderers aren't necessarily complete so you can model the other renderers after its code.
+
+-I simplified the app by eliminating many of the external libraries because I think it's easier for volunteers to work with clean code. So for instance I stripped out the react-bootstrap library and went with straight bootstrap.
+
+- Basically the front end app is integrated with the backend server and uses Ajax calls. The front end sends an Ajax call to the server in the form 'controller-name/controller-method/single-parameter' where the parameter optional and is usually a record_id. So a typical front-end call may look like this:
+'http://localhost:4500/user/getUserById/5d3ac750a4ad5c0d18196744'
+
+- The back-end uses a single router which parses calls of the type shown above into a controller/method and passes the parm to the controller.
+
+- The 'user' record is the primary source of truth for the app. So the ability to add users to teams or projects is a function of the user record. In other words you cannot add users to teams or projects while looking at their respective records. You could change this in the future, but probably works fine. So if you want to add a user to a team or project, you do it from the users record.
+
+- Mongodb can be denormalized so relatively static items such as teamname or projectname can be stored in the user record along with the id. You would then have to run a chron job to make sure the records are in sync. I thought about having the team members in the team record and the project members in the project record but decided the data was more dynamic and it was easier to just do an aggregate lookup across the team or project and the user record.
+
+- The backend server returns a response object with success=true/false. It can also return an errCode which can then be checked on the frontend. Currently only the user controller returns an errCode (of 101 if the user/password is invalid). The errCode scheme needs to be filled out in both the backend and frontend.
+
+- Some of the code around the modals is a little buggy, e.g. errors aren't refreshed after closing and reopening.

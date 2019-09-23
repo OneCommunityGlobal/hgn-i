@@ -1,0 +1,12 @@
+{
+  "name": "hgn",
+  "version": "0.8.0",
+  "description": "The new and complete HGN app re-written in React. Installable packages.json under app and server",
+  "main": "app",
+  "scripts": {},
+  "author": "The HGN Team",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+   }
+}

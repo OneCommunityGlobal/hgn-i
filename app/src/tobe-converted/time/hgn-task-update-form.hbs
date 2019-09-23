@@ -1,0 +1,51 @@
+<div class="card border-danger" style="color: black">
+  <div class="card-header">
+    <h4 class="card-title">
+      <a class="_accordion-toggle" data-toggle="collapse" data-target="#showTimeEntryForm">
+        Add Time To Task
+      </a>
+      <button type="button pull-right" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </h4>
+  </div>
+  <div class="card-body" id="showTimeEntryForm">
+    <form id="frmSubmitTimeEntry" class="{{isFormSubmitted}}">
+      <div class="form-group row">
+        <label class="col-3 label">Date:</label>
+        <input type="date" id="dateOfWork" value= {{today}} min= {{minDateForLogging}} max= {{maxDateForLogging}} class="form-control col-9"
+          onchange= {{action (mut dateOfWork) value = "target.value"}} required placeholder="Select date of work">
+      </div>
+      <div class="form-group row">
+        <label class="col-3 label">Time:
+          <small>HH:MM</small>
+        </label>
+        <input id="hours" class="form-control col-4 ml-1" type="number" min=0 max=23 onchange= {{action (mut taskhours) value = "target.value"}}
+          placeholder="Hours" value= {{taskhours}}>
+        <input id="minutes" class="form-control col-4  ml-1" type="number" min=0 max=59 onchange= {{action (mut taskminutes) value = "target.value"}}
+          placeholder="Minutes" value= {{taskminutes}}>
+      </div>
+      <div class="form-group row">
+        <label class="col-3 label">Project:</label>
+        <select class="form-control col-9" onchange= {{action (mut forprojectId) value="target.value"}} required>
+          <option value="" disabled selected>Select Project</option>
+          {{#each projects as |project|}}
+            {{#if project.projectName}}
+              <option value= {{project.projectId}}>{{project.projectName}}</option>
+            {{/if}}
+          {{/each}}
+        </select>
+      </div>
+      <div class="form-group row">
+        <label class="col-3 label">Notes:</label>
+        {{tinymce-editor options=options value=notes onValueChanged=(action (mut notes))}}
+      </div>
+      <div class="form-group row">
+        <input type="checkbox" class="form-control col-1" checked=true checked=true onchange= {{ action (mut isTangible) value = "target.checked"}}>
+        <label class="label col-5">Tangible</label>
+      </div>
+      <button class="btn btn-danger btn-sm pull-left" {{action "clearform"}}>Clear Form</button>
+      <button type="submit" class="btn btn-primary btn-sm pull-right" {{action "submitTimeEntry"}}>Submit</button>
+    </form>
+  </div>
+</div>
