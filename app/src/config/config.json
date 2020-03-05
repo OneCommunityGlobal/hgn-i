@@ -1,8 +1,0 @@
-{
-    "http": "http",
-    "server": {"host": "localhost", "port": "4500"},
-    "tokenKey" : "token",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcnlUaW1lc3RhbXAiOiIxMjM0NTY3ODkwIiwidXNlcmlkIjoiSm9obiBEb2UiLCJyb2xlIjoxNTE2MjM5MDIyfQ.2TPeD1Aj3PrZQL-sHdScfghDj4h9sOojVxXIuWhvS04",
-
-    "debug": true
-}
